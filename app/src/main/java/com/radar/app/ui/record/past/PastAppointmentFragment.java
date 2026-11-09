@@ -1,5 +1,6 @@
 package com.radar.app.ui.record.past;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.radar.app.R;
 import com.radar.app.data.DummyData;
+import com.radar.app.ui.record.detail.RecordDetailActivity;
 
 public class PastAppointmentFragment extends Fragment {
 
@@ -29,5 +31,11 @@ public class PastAppointmentFragment extends Fragment {
         rvPast.setAdapter(adapter);
 
         adapter.setAppointments(DummyData.getPastAppointments());
+
+        adapter.setOnItemClickListener(appointment -> {
+            Intent intent = new Intent(requireContext(), RecordDetailActivity.class);
+            intent.putExtra(RecordDetailActivity.EXTRA_APPOINTMENT_ID, appointment.getId());
+            startActivity(intent);
+        });
     }
 }
