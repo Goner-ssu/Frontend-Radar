@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_root"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_rank_row"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp">
+
+    <!-- 순위 -->
+    <TextView
+        android:id="@+id/tv_rank"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        android:textColor="#222222"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!-- 프로필 동그라미 -->
+    <View
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:background="@drawable/bg_avatar" />
+
+    <!-- 이름 -->
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:textColor="#222222"
+        android:textSize="15sp" />
+
+    <!-- 값 (35분 / 5회) -->
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#222222"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
